@@ -95,7 +95,7 @@ class BoylesportsAPI {
       throw new BoylesportsAPIException( "You can't loop this class by this method" );
     }
 
-    return new BoylesportsAPI( $this->_queryParams, $url );
+    return new BoylesportsAPI( $this->_queryParams, rtrim($url, '.json') );
   }
 
   /**
